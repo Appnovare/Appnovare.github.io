@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appnovare | Desenvolvimento de Apps Mobile em Cuiabá</title>
+    <meta name="description" content="Desenvolvimento de aplicativos móveis personalizados com Dart/Flutter em Cuiabá. Soluções inteligentes para negócios que querem crescer.">
+    
+    <link rel="canonical" href="https://appnovare.github.io/">
+
+    <meta property="og:title" content="Appnovare | Desenvolvimento de Apps Mobile">
+    <meta property="og:description" content="Transformamos sua ideia em um aplicativo de sucesso. Soluções personalizadas em Flutter para Android e iOS.">
+    <meta property="og:image" content="https://appnovare.github.io/logo-completo-colorido.jpg">
+    <meta property="og:url" content="https://appnovare.github.io/">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="logo-branco.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Appnovare",
+      "image": "https://appnovare.github.io/logo-completo-colorido.jpg",
+      "telephone": "+55-65-98101-6995",
+      "description": "Desenvolvimento de aplicativos móveis sob medida em Cuiabá, utilizando Dart e Flutter para criar soluções inteligentes para Android e iOS.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cuiabá",
+        "addressRegion": "MT",
+        "addressCountry": "BR"
+      },
+      "url": "https://appnovare.github.io/"
+    }
+    </script>
+
+    <style>
+        /* --- Custom Styles --- */
+        :root {
+            --bs-primary: #8A2BE2; /* Roxo como cor primária */
+            --bs-primary-rgb: 138, 43, 226;
+            --bs-body-bg: #121212; /* Fundo escuro */
+            --bs-body-color: #e0e0e0;
+            --bs-card-bg: #1e1e1e;
+            --bs-card-border-color: #2e2e2e;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            background-color: rgba(18, 18, 18, 0.8) !important;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('capa-roxa.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0;
+            margin-top: 56px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+        }
+
+        .hero .lead {
+            font-size: 1.25rem;
+        }
+        
+        .hero-icon-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .section-title {
+            color: var(--bs-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            background-color: var(--bs-card-bg);
+            border-color: var(--bs-card-border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(var(--bs-primary-rgb), 0.15);
+        }
+        
+        .portfolio-icon-placeholder {
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2a2a2e;
+        }
+
+        .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+        }
+        
+        .btn-outline-primary {
+             border-color: var(--bs-primary);
+             color: var(--bs-primary);
+             padding: 0.75rem 1.5rem;
+             font-weight: 600;
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--bs-primary);
+            color: white;
+        }
+
+        .bg-card-section {
+            background-color: var(--bs-card-bg);
+        }
+        
+        .badge.bg-custom-green {
+            background-color: rgba(33, 150, 83, 0.2) !important;
+            color: #27AE60 !important;
+            border: 1px solid rgba(33, 150, 83, 0.4);
+        }
+        
+        .badge.bg-custom-blue {
+            background-color: rgba(45, 156, 219, 0.2) !important;
+            color: #2D9CDB !important;
+            border: 1px solid rgba(45, 156, 219, 0.4);
+        }
+
+        .icon-box i {
+            font-size: 2.5rem;
+            color: var(--bs-primary);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="logo-branco.png" alt="Logo Appnovare" height="70">
+            <span class="ms-2 fw-bold fs-4">Appnovare</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#publicacao">Publicação</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero text-center text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 text-lg-start">
+                <h1 class="display-4">Inovação que cabe no seu bolso. <span class="text-primary">E na sua mão.</span></h1>
+                <p class="lead my-4">Desenvolvimento de aplicativos móveis personalizados com Dart/Flutter. Soluções inteligentes para negócios que querem crescer.</p>
+                <a href="#contato" class="btn btn-primary me-2">Solicitar Orçamento Gratuito</a>
+                <a href="https://wa.me/5565981016995" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp (abre em nova aba)">Falar no WhatsApp</a>
+            </div>
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="hero-icon-box">
+                    <img src="logo-completo-branco-cinza.png" alt="Logo Completo Appnovare" style="max-width: 280px; border-radius: 20px; box-shadow: 0 0 35px rgba(138, 43, 226, 0.25);">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    
+    <section id="servicos" class="py-5 bg-card-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">NOSSOS SERVIÇOS</h2>
+                <p class="lead text-body-secondary">Oferecemos soluções completas para levar seu negócio ao próximo nível digital.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 text-center">
+                        <div class="card-body">
+                            <div class="icon-box mb-3"><i class="bi bi-phone" aria-hidden="true"></i></div>
+                            <h5 class="card-title fw-bold">Desenvolvimento de Apps Sob Medida</h5>
+                            <p class="card-text text-body-secondary">Aplicativos nativos desenvolvidos com Dart/Flutter para Android e iOS, atendendo exatamente às necessidades do seu negócio.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 text-center">
+                        <div class="card-body">
+                            <div class="icon-box mb-3"><i class="bi bi-lightbulb" aria-hidden="true"></i></div>
+                            <h5 class="card-title fw-bold">Consultoria em Soluções Digitais</h5>
+                            <p class="card-text text-body-secondary">Ajudamos você a definir o melhor caminho tecnológico para sua ideia com uma análise completa de viabilidade e estratégia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 p-3 text-center">
+                        <div class="card-body">
+                            <div class="icon-box mb-3"><i class="bi bi-shield-check" aria-hidden="true"></i></div>
+                            <h5 class="card-title fw-bold">Suporte e Manutenção</h5>
+                            <p class="card-text text-body-secondary">Pacotes de suporte contínuo após a entrega do seu app. Atualizações, correções e novas funcionalidades sempre que necessário.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">NOSSO PORTFÓLIO</h2>
+                <p class="lead text-body-secondary">Conheça alguns dos projetos que desenvolvemos e transformaram negócios.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="portfolio-icon-placeholder card-img-top">
+                             <i class="bi bi-cart4 display-1 text-body-secondary" aria-hidden="true"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">App E-commerce</h5>
+                            <p class="card-text text-body-secondary">Aplicativo completo de vendas online com carrinho, pagamentos e gestão de produtos.</p>
+                            <span class="badge rounded-pill text-bg-primary me-1">E-commerce</span>
+                            <span class="badge rounded-pill text-bg-primary me-1">Pagamentos</span>
+                            <span class="badge rounded-pill text-bg-primary me-1">Flutter</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                         <div class="portfolio-icon-placeholder card-img-top">
+                             <i class="bi bi-truck display-1 text-body-secondary" aria-hidden="true"></i>
+                         </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">App Logística</h5>
+                            <p class="card-text text-body-secondary">Sistema de rastreamento e gestão de entregas com GPS e notificações em tempo real.</p>
+                            <span class="badge rounded-pill text-bg-primary me-1">Logística</span>
+                            <span class="badge rounded-pill text-bg-primary me-1">GPS</span>
+                            <span class="badge rounded-pill text-bg-primary me-1">Real-time</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publicacao" class="py-5 bg-card-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">PUBLICAÇÃO NAS LOJAS</h2>
+                <p class="lead text-body-secondary">Oferecemos suporte completo para você publicar seu app com tranquilidade, seja na Google Play Store ou na Apple App Store.</p>
+            </div>
+            <div class="row justify-content-center g-4">
+                <div class="col-lg-5">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <h4 class="fw-bold"><i class="bi bi-google-play text-success" aria-hidden="true"></i> Google Play Store</h4>
+                            <hr>
+                            <p><span class="badge bg-custom-green rounded-pill">Taxa única de ativação</span></p>
+                            <p>Com nosso auxílio, você terá seu app testado e publicado corretamente. Orientamos todo o processo, incluindo testes e acesso à conta de desenvolvedor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card h-100 p-3">
+                        <div class="card-body">
+                            <h4 class="fw-bold"><i class="bi bi-apple text-info" aria-hidden="true"></i> Apple App Store</h4>
+                            <hr>
+                            <p><span class="badge bg-custom-blue rounded-pill">Conta anual de publicação</span></p>
+                            <p>Publicar na Apple exige alguns cuidados, mas você estará amparado com orientações claras e suporte técnico para garantir a melhor experiência possível.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                 <h2 class="section-title">VAMOS CONVERSAR?</h2>
+                <p class="lead text-body-secondary">Entre em contato conosco e transforme sua ideia em um aplicativo de sucesso.</p>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h4 class="mb-3">Solicitar Orçamento</h4>
+                    <form action="https://formspree.io/f/xeolqnnd" method="POST">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome *</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome completo" required aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail *</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="seu@email.com" required aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label">Telefone/WhatsApp *</label>
+                            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(65) 98101-6995" required aria-required="true">
+                        </div>
+                        <div class="mb-3">
+                            <label for="ideia" class="form-label">Descreva sua ideia *</label>
+                            <textarea class="form-control" id="ideia" name="ideia" rows="4" placeholder="Conte-nos sobre seu projeto..." required aria-required="true"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Solicitar Orçamento Gratuito</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="mb-3">Informações de Contato</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="d-flex align-items-center"><i class="bi bi-envelope fs-4 me-3 text-primary" aria-hidden="true"></i> <span>appnovare@gmail.com</span></p>
+                            <hr>
+                            <p class="d-flex align-items-center"><i class="bi bi-geo-alt fs-4 me-3 text-primary" aria-hidden="true"></i> <span>Cuiabá - MT, Brasil</span></p>
+                             <hr>
+                            <p class="d-flex align-items-center mb-0"><i class="bi bi-globe fs-4 me-3 text-primary" aria-hidden="true"></i> <span>Atendimento para todo o Brasil</span></p>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 mt-4">
+                         <a href="https://wa.me/5565981016995" class="btn btn-success btn-lg" target="_blank" rel="noopener noreferrer" aria-label="Contato Direto via WhatsApp (abre em nova aba)"><i class="bi bi-whatsapp me-2" aria-hidden="true"></i> Contato Direto via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center py-4 bg-card-section border-top border-secondary-subtle">
+    <div class="container">
+        <img src="logo-branco.png" alt="Símbolo da Appnovare" height="50" class="mb-3">
+        <p class="mb-0 text-body-secondary">&copy; 2025 Appnovare. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
